@@ -20,9 +20,6 @@ coffee_dict = {
     'Price': ''
 }
 
-
-
-
 for link in doc.find_all('a'):
     if link.get('href') != None:
         list.append(link.get('href'))
@@ -63,27 +60,26 @@ for links in soup.find_all("span"):
 
 coffee_dict['Name'] = soup.title.string
 
-# print(type(soup.find('img', {'class' : 'product-detail__media--image lazyload crop-image'})))
+
+# def send_email()
+
+
+
+
+
 
 bag = "https:" + soup.find('img', {'class' : 'product-detail__media--image lazyload crop-image'})['data-src']
 
 
-
-
-res = requests.get(bag, stream=True)
-
-if res.status_code == 200:
-    with open((coffee_dict['Name']+'.png'), 'wb') as f:
-        shutil.copyfileobj(res.raw, f)
-    print("Image successfully downloaded: ", (coffee_dict['Name']+'.jpg'))
-    # print(bag)
-else:
-    print("Image couldn''t be retrieved\n")
-
-
-
-
-# print(soup.find_all('img').string)
+def save_bag(bag):
+    res = requests.get(bag, stream=True)
+    if res.status_code == 200:
+        with open((coffee_dict['Name']+'.png'), 'wb') as f:
+            shutil.copyfileobj(res.raw, f)
+        print("Image successfully downloaded: ", (coffee_dict['Name']+'.jpg'))
+        # print(bag)
+    else:
+        print("Image couldn''t be retrieved\n")
 
 ### Shipping ###
 

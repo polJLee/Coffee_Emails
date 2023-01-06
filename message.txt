@@ -1,0 +1,6 @@
+Dear ${PERSON_NAME},
+
+This is a subscription newsletter from paul_over_coffee!
+Below are the coffees that are being offered at Leible, Marketlane and MadeofMany
+
+Have a great day!
