@@ -1,7 +1,12 @@
 import smtplib
 from string import Template
 from email.mime.multipart import MIMEMultipart
+from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
+from html2image import Html2Image
+from bs import marketlane
+from bs import writeMessage
+
 
 MY_ADDRESS = 'poljunhyeok@outlook.com'
 PASSWORD = 'povcoffee58290'
@@ -22,6 +27,8 @@ def read_template(filename):
     return Template(template_file_content)
 
 def main():
+    bagList = writeMessage(marketlane())
+    hti = Html2Image()
     names, emails = get_contacts('/Users/paullee/Desktop/Coffee_Emails/contacts.txt')
     message_template = read_template('/Users/paullee/Desktop/Coffee_Emails/message.txt')
 
@@ -37,7 +44,17 @@ def main():
         
         msg['From']=MY_ADDRESS
         msg['To']=email
-        msg['Subject']="This is a Test"
+        msg['Subject']="Coffee Newsletter"
+        i = 0
+        while i < len(bagList):
+            bag = bagList[i]
+            print(bag)
+            bagLink = hti.screenshot(url = bag)
+            fp = open('screenshot.png', mode='rb')
+            msgImage = MIMEImage(fp.read())
+            fp.close()
+            msg.attach(msgImage)
+            i += 1
 
         msg.attach(MIMEText(message,'plain'))
 

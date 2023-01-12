@@ -135,7 +135,7 @@ def writeMessage(coffInfo):
         message += "Origin: " + coffee['Origin'] + '\n'
         message += "Producer: " + coffee['Producer'] + '\n'
         message += "Relationship: " + coffee['Relationship'] + '\n'
-        message += "Price: " + coffee['Price'] + '\n'
+        message += "Price: $" + coffee['Price'] + '\n'
         message += "Taste: " + coffee['Taste'] + '\n'
         message += coffee['Link'] + '\n\n'
         bagList.append(coffee['Bag'])
