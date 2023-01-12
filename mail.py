@@ -4,8 +4,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
 from html2image import Html2Image
-from bs import marketlane
-from bs import writeMessage
+from bs_marketlane import marketlane
+from bs_marketlane import writeMessage
 
 
 MY_ADDRESS = 'poljunhyeok@outlook.com'

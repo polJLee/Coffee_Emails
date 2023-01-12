@@ -1,11 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-import shutil
 import re
-
-# write up a function that adds and checks the contact list of the newsletter subscription service
-
-
 
 def getInfo(coff): #coff is a list of strings that is scraped from the website with all the relevant information. The function returns a single dictionary
     coffee_dict = {
