@@ -1,8 +1,6 @@
 from bs4 import BeautifulSoup
-from bs_marketlane import getInfo
-
 import requests
-import re
+
 
 url = "https://leiblecoffee.com.au/collections/single-origin"
 leible = "https://leiblecoffee.com.au/"
@@ -14,30 +12,55 @@ doc = BeautifulSoup(result.text, "html.parser")
 #     f.write(d)
 #     f.close()
 
-
-
 # print(doc.find_all('a'))
 
-filter_list = []
+filter_list = []  # <- Stores https links of all the single-origin coffee
+info_list = []    # <- Stores https links of all the coffee information ()
+all_beans = []    # <- Stores coffee dictionary for us to use later to write messages to the clients
 
+ ## scraping single-origin information (Flavour, Region, Altitude, Variety, Process, Farm)
 for link in doc.find_all('a'):
     if '/products' in link.get('href') and ((leible + link.get('href')) not in filter_list) and ('drip-bag' not in link.get('href')):
-        filter_list.append( leible + link.get('href'))
-        # print(link.get('href'))  
-r = requests.get(filter_list[0])
-soup = BeautifulSoup(r.text, "html.parser")
-# with open('/Users/paullee/Desktop/Coffee_emails/leible.html', 'w') as f:
-#     f.write(str(soup))
-#     f.close()
-print(filter_list[0])
-# print(soup.title.string.strip()) # Name
-x = soup.title.string.strip()
-y = x.split()
-# print(y[0])
+        filter_list.append(leible + link.get('href'))
 
-for link in soup.find_all('img'):
-    if y[0] in link.get('alt'):
-        print(link.get('src'))
+i = 0
+while i < len(filter_list):
+    r = requests.get(filter_list[i])
+    soup = BeautifulSoup(r.text, "html.parser")
+
+    coffee_dict = {
+        'Name'  : '',
+        'Price' : '',
+        'Photo' : ''
+    }
+
+    coffee_dict['Name'] = soup.title.string.strip()
+    coffee_dict['Price'] = '$' + soup.find('meta', {'property' : 'product:price:amount'}).get('content')
+
+    photo = soup.find('img', {'data-widths' : '[200,400,600,700,800,900,1000]'})
+
+    if photo == None:
+        x = soup.title.string.strip()
+        y = x.split()
+        for link in soup.find_all('img'):
+            if (y[0] in link.get('alt')) and link.get('src') != None:
+                if 'png' in link.get('src') and 'products' in link.get('src'):
+                    photo = ("https:" + link.get('src'))
+    else:
+        photo = 'https:' + photo.get('data-original-src')
+    
+    coffee_dict['Photo'] = photo
+    all_beans.append(coffee_dict)
+    i += 1
+
+for item in all_beans:
+    print('Name: ' + item['Name'])
+    print('Price: ' + item['Price'])
+    print('Photo Link: ' + item['Photo'])
+    print('\n\n')
+    
+
+
 # print(soup.find_all('img'))
 
 

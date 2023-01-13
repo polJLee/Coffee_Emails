@@ -49,7 +49,7 @@ def main():
         while i < len(bagList):
             bag = bagList[i]
             print(bag)
-            bagLink = hti.screenshot(url = bag)
+            hti.screenshot(url = bag)
             fp = open('screenshot.png', mode='rb')
             msgImage = MIMEImage(fp.read())
             fp.close()
