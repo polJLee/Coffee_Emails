@@ -1,57 +1,23 @@
 Dear ${PERSON_NAME},
 
 This is a subscription newsletter from paul_over_coffee!
-Below are the coffees that are being offered at Leible, Marketlane and MadeofMany
+Below are the coffees that are being offered at Leible
 
-Name: Hadeso - Ethiopian Coffee (Filter) | Market Lane Coffee
-Process: washed
-Variety: ﻿﻿JARC 74112
-Origin: Guji, Ethiopia
-Producer: ﻿ Testi Coffee (between 650-750 local coffee growers)
-Relationship: since 2019
-Price: $$26.00
-Taste: This coffee tastes floral with stewed apricot and lime.
-https://marketlane.com.au//collections/filter-beans/products/hadeso-filter-beans
-
-Name: Hacienda Carmona - Guatemalan Coffee (Filter) | Market Lane Coffee
-Process: washed
-Variety: ﻿﻿Bourbon &amp; typica varieties
-Origin: Antigua, Guatemala
-Producer: ﻿ Maria Zelaya (farm managed by Ricardo Zelaya)
-Relationship: since 2008 (Hacienda Carmona since 2022)
+Name: ETHIOPIA Gesha Village GVA.4 Surma G31 Natural Process Auction Winning – LEIBLE COFFEE
+Price: $$24.50
+Name: PANAMA Esmeralda Gesha Cabaña San Jose ES-N-2 Natural Process Auction  – LEIBLE COFFEE
+Price: $$34.95
+Name: COlOMBIA Bourbon Sidra Natural El Diviso – LEIBLE COFFEE
+Price: $$29.50
+Name: The Best Of Panama Gift Box – LEIBLE COFFEE
+Price: $$199.00
+Name: COLOMBIA La Esperanza Bourbon Rosado Anaerobic Natural Process Auction – LEIBLE COFFEE
+Price: $$22.50
+Name: kenya Thunguri Washed – LEIBLE COFFEE
+Price: $$22.50
+Name: COSTARICA SHB LAS LAJAS ALMA NEGRA – LEIBLE COFFEE
 Price: $$24.00
-Taste: This coffee tastes like plum and dark chocolate with a heavy mouthfeel
-https://marketlane.com.au//collections/filter-beans/products/hacienda-carmona-filter-beans
-
-Name: Mwiria - Kenyan Coffee (Filter) | Market Lane Coffee
-Process: washed
-Variety: SL28, SL34, ruiru 11 &amp; batian
-Origin: Embu, Kenya
-Producer: Around 1,000 local members of the Central Ngandori Farmers’ Cooperative Society
-Relationship: since 2021
-Price: $$26.00
-Taste: This coffee tastes rich and syrupy with crisp apple and apricot
-https://marketlane.com.au//collections/filter-beans/products/mwiria-filter-beans
-
-Name: Las Piñas - Colombian Coffee (Filter) | Market Lane Coffee
-Process: washed
-Variety: caturra
-Origin: Ibagué, Colombia
-Producer: Reinaldo Parra
-Relationship: since 2021
-Price: $$22.00
-Taste: This coffee tastes like caramel and rose with a blackcurrant finish.
-https://marketlane.com.au//collections/filter-beans/products/las-pinas-filter-beans
-
-Name: Finca Los Palomos - Colombian Coffee (Filter) | Market Lane Coffee
-Process: washed
-Variety: chiroso
-Origin: Urrao, Colombia
-Producer: Léonardo Henao
-Relationship: since 2020
-Price: $$26.00
-Taste: This coffee tastes floral and complex with blackcurrant and orange.
-https://marketlane.com.au//collections/filter-beans/products/finca-los-palomos-filter-beans
-
+Name: Colombia Red Bourbon Honey - Las Margaritas - La Esperanza – LEIBLE COFFEE
+Price: $$23.50
 Have a good day!
 paul_over_coffee

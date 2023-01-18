@@ -4,12 +4,18 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
 from html2image import Html2Image
+
 from bs_marketlane import marketlane
-from bs_marketlane import writeMessage
+from bs_marketlane import writeMessage as marketlane_write
+
+from bs_leible import leible
+from bs_leible import writeMessage as leible_write
 
 
 MY_ADDRESS = 'poljunhyeok@outlook.com'
 PASSWORD = 'povcoffee58290'
+contacts = '/Users/paullee/Desktop/Coffee_Emails/contacts.txt'
+message_path = '/Users/paullee/Desktop/Coffee_Emails/message.txt'
 
 
 def get_contacts(filename):
@@ -27,10 +33,11 @@ def read_template(filename):
     return Template(template_file_content)
 
 def main():
-    bagList = writeMessage(marketlane())
+    # bagList = marketlane_write(marketlane())
+    bagList = leible_write(leible())
     hti = Html2Image()
-    names, emails = get_contacts('/Users/paullee/Desktop/Coffee_Emails/contacts.txt')
-    message_template = read_template('/Users/paullee/Desktop/Coffee_Emails/message.txt')
+    names, emails = get_contacts(contacts)
+    message_template = read_template(message_path)
 
     s = smtplib.SMTP(host='smtp-mail.outlook.com', port=587)
     s.starttls()
